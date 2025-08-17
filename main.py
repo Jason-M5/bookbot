@@ -11,7 +11,7 @@ if has_book != 1:
 else:
     book = sys.argv[-1]
 
-    print(book)
+    #print(book)
 
 # OK.. I think i just replace with open to book and download the required books.
     
@@ -19,12 +19,12 @@ else:
 
 
 def main():
-    with open("books/frankenstein.txt") as f:
+    with open(book) as f:
         file_contents = f.read()    
     
     a = get_book_text(file_contents)
     b = get_char_count(file_contents)
-    c = print_report(a, b)
+    c = print_report(a, b, book)
 
 
 main()
