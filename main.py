@@ -11,12 +11,6 @@ if has_book != 1:
 else:
     book = sys.argv[-1]
 
-    #print(book)
-
-# OK.. I think i just replace with open to book and download the required books.
-    
-
-
 
 def main():
     with open(book) as f:
