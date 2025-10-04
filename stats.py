@@ -16,6 +16,19 @@ def get_char_count(file_contents):
             chars[l] += 1
     return chars
 
+def find_longest_word(file_contents, longest_word=""):
+    if len(file_contents) == 0:
+        return longest_word
+    words = file_contents.split(maxsplit=1)
+    if len(words) < 1:
+        return longest_word
+    first_word = words[0]
+    if len(first_word) > len(longest_word):
+        longest_word = first_word
+    if len(words) < 2:
+        return longest_word
+    return find_longest_word(words[1], longest_word)
+
 
 
 def print_report(a, b, book):
